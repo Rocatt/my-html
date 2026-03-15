@@ -217,7 +217,7 @@
 
                             <div style="width: 540px;height: 30px;display: flex;justify-content: space-between;">
                                 <div>
-                                    <p class="FZMSTFW" style="font-size: 30px;text-align: left;">最终价格</p>
+                                    <p class="FZMSTFW" style="font-size: 30px;text-align: left;">参考价格</p>
                                 </div>
                                 <div style="height: 30px;">
                                     <a class="FZMSTFW" style="font-size: 30px;
@@ -338,8 +338,8 @@
                 current_json: [],
                 final_price: 0,
                 open_side_drawer: false,
-                small_img_src: "/my-html/img/project/", //小图文件夹头部
-                big_img_src: "/my-html/img/project720p/", //大图路径头部
+                small_img_src: "/my-html/img/project720P/", //小图文件夹头部
+                big_img_src: "/my-html/img/project/", //大图路径头部
                 project_json: [
                     //第一把套件信息
                     {
@@ -347,16 +347,13 @@
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
+                            "crux45/1.png",
+                            "crux45/2.png",
                             "crux45/3.png",
-                            "logo/1.png",
-                            "crux45/2.png",
-                            "crux45/1.png",
-                            "kcrux45/3.png",
-                            "logo/1.png",
-                            "crux45/2.png",
-                            "crux45/1.png",
+                            "crux45/4.png",
+                            "crux45/5.png"
                         ],
-                        "big_img_src": "/my-html/img/project720p/" + "crux45/3.png",
+                        "big_img_src": "/my-html/img/project/" + "crux45/1.png",
                         //右侧选项
                         "select": [
                             {
@@ -419,44 +416,89 @@
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
-                            "crux45/3.png",
-                            "logo/1.png",
-                            "crux45/2.png",
-                            "crux45/1.png",
-                            "crux45/3.png",
-                            "logo/1.png",
-                            "crux45/2.png",
-                            "crux45/1.png",
+                            "kingdom keeper/2.webp",
+                            "kingdom keeper/3.webp",
+                            "kingdom keeper/4.webp",
+                             "kingdom keeper/1.png",
                         ],
-                        "big_img_src": "/img/project720p/" + "crux45/3.png",
+                        "big_img_src": "/my-html/img/project/" + "kingdom keeper/2.webp",
+                        //右侧选项
+                        "select": [
+                            {
+                                "activeTypeIndex": -1,
+                                "title": "套装选择：",
+                                "type": [
+                                    { "name": "大全套（键帽）", "price": "199" },
+                                ]
+                            },
+                        ],
+                        //右侧文字
+                        "text": {
+                            "title": "KING",
+
+                            "project_type": "Keycaps.",
+
+                            "detail": `(键帽)
+                        配列：BASE+40S+QAZ
+                        材质工艺：PBT五面热升华
+                        高度：原厂
+
+                        以电子游戏中勇者小队为灵感设计的主题键帽。
+                        采用经典的圣骑士+勇者+法师+牧师的个性组合，清新的绿色和淡粉色搭配，营造出冒险旅程中的勇气与温暖。
+                        采用经典的PBT材质和五面热升华工艺，提供舒适的打字体验和持久的图案清晰度。    `,
+
+                            "left_detail": `详情：
+                        淘宝现货已上架：搜索KINGDOM KEEPER键帽或
+                        搜索店铺：Jin Lab。
+                        生产合作：堇忆。`,
+                        }
+                    },
+                    //第三把套件信息
+                    {
+                        transitionDirection : 'left',
+                        activeThumbIndex: 0,
+                        //左侧图片
+                        little_img_src: [
+                            "crux45/1.png",
+                            "crux45/2.png",
+                            "crux45/3.png",
+                            "crux45/4.png",
+                            "crux45/5.png",
+                        ],
+                        "big_img_src":  "/my-html/img/project/" + "crux45/1.png",
                         //右侧选项
                         "select": [
                             {
                                 "activeTypeIndex": -1,
                                 "title": "颜色选择：",
                                 "type": [
-                                    { "name": "蓝蓝蓝（阳极）", "price": "11" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "22" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "33" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "44" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "55" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "66" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "77" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "88" },
+                                    { "name": "深蓝色（阳极）", "price": "11" },
+                                    { "name": "深紫色（阳极）", "price": "22" },
+                                    { "name": "草绿色（阳极）", "price": "33" },
+                                    { "name": "深洋红（阳极）", "price": "44" },
+                                    { "name": "太空银（阳极）", "price": "55" },
+                                    { "name": "午夜黑（阳极）", "price": "66" },
+                                    { "name": "灰金色（阳极）", "price": "77" },
                                 ]
                             },
                             {
                                 "activeTypeIndex": -1,
-                                "title": "颜色选择：",
+                                "title": "配重选择：",
                                 "type": [
-                                    { "name": "蓝蓝蓝（阳极）", "price": "11" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "22" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "33" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "44" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "55" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "66" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "77" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "88" },
+                                    { "name": "不锈钢（内配）", "price": "11" },
+                                    { "name": "黄铜（内配）", "price": "22" },
+                                    { "name": "红铜（内配）", "price": "33" },
+                                    { "name": "阳极铝（内配）", "price": "44" },
+                                ]
+                            },
+                         {
+                                "activeTypeIndex": -1,
+                                "title": "定位板选择：",
+                                "type": [
+                                    { "name": "不锈钢（抛光）", "price": "11" },
+                                    { "name": "黄铜（抛光）", "price": "22" },
+                                    { "name": "FR4（开孔）", "price": "33" },
+                                    { "name": "PC（不开孔）", "price": "44" },
                                 ]
                             }
                         ],
@@ -477,84 +519,8 @@
                         目。    `,
 
                             "left_detail": `详情：
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 
-                        啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊`,
-                        }
-                    },
-                    //第三把套件信息
-                    {
-                        transitionDirection : 'left',
-                        activeThumbIndex: 0,
-                        //左侧图片
-                        little_img_src: [
-                            "damn60/1.png",
-                            "logo/1.png",
-                            "crux45/3.png",
-                            "crux45/1.png",
-                            "damn60/1.png",
-                            "logo/1.png",
-                            "crux45/3.png",
-                            "crux45/1.png",
-                        ],
-                        "big_img_src":  "/my-html/img/project/" + "damn60/1.png",
-                        //右侧选项
-                        "select": [
-                            {
-                                "activeTypeIndex": -1,
-                                "title": "颜色选择：",
-                                "type": [
-                                    { "name": "蓝蓝蓝（阳极）", "price": "11" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "22" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "33" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "44" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "55" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "66" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "77" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "88" },
-                                ]
-                            },
-                            {
-                                "activeTypeIndex": -1,
-                                "title": "颜色选择：",
-                                "type": [
-                                    { "name": "蓝蓝蓝（阳极）", "price": "11" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "22" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "33" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "44" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "55" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "66" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "77" },
-                                    { "name": "蓝蓝蓝（阳极）", "price": "88" },
-                                ]
-                            }
-                        ],
-                        //右侧文字
-                        "text": {
-                            "title": "DAMN60",
-
-                            "project_type": "Keyboard.",
-
-                            "detail": `(套件)
-                        配列：45%
-                        外壳材质：铝
-                        配件：不锈钢PVD外配重
-
-                        南十字座（CRUX）为设计灵感，上盖和底部配重均刻有
-                        南十字座图案。
-                        搭配正面的指示灯和PVD配件，表达出星空的璀璨夺
-                        目。    `,
-
-                            "left_detail": `详情：
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊 
-                        啊啊啊啊啊啊啊啊啊啊啊
-                        啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊`,
+                        45%配列，固定抛光不锈钢外配，正面十字座灯件。
+                        提供多种颜色及配重选择。`,
                         }
                     }
                     /**复制以下代码添加产品详情
