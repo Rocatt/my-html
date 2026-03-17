@@ -1,5 +1,5 @@
 // 注册全局指令 v-marquee (从左到右连续循环)
-Vue.directive('marquee', {    
+Vue.directive('marquee', {
   inserted(el) {
     const container = el;
 
@@ -8,7 +8,7 @@ Vue.directive('marquee', {
       const content = container.querySelector('.CAROUSELPRO');
       if (!content) return;
 
-      const isOverflow = content.scrollWidth > container.clientWidth;
+      const isOverflow = content.scrollWidth > 600;
       const isActive = container.classList.contains('marquee-active');
 
       if (isOverflow && !isActive) {

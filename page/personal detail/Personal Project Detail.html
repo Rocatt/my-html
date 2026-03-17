@@ -22,83 +22,38 @@
     </script>
     <!-- 生产环境版本，优化了尺寸和速度 -->
     <script src="/my-html/js/vue.min.js"></script>
-
+    <script src="/my-html/js/v-marquee.js"></script>
 
 </head>
 
 <body>
-
-    <div id="navbar" class="navbar-show">
-        <div class="navbar-container">
-            <div id="top-fixed-group">
-                <img src="/my-html/img/main/Union.png" alt="俺的图图呢" class="top-logo" style="cursor: pointer;">
-                <div id="menu-trigger">
-                    <div class="menu-text">
-                        <a class="FZMSTFW2 navbar-menu-link">菜单</a>
-                        <a class="SMILEYSANS navbar-menu-subtitle">Menu</a>
+    <template id="app">
+        <div>
+            <div id="navbar" class="navbar-show">
+                <div class="navbar-container">
+                    <div id="top-fixed-group">
+                        <img src="/my-html/img/main/Union.png" alt="俺的图图呢" class="top-logo" style="cursor: pointer;">
+                        <div id="menu-trigger">
+                            <div class="menu-text">
+                                <a class="FZMSTFW2 navbar-menu-link">菜单</a>
+                                <a class="SMILEYSANS navbar-menu-subtitle">Menu</a>
+                            </div>
+                            <div class="menu-lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-lines">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- 右侧抽屉栏 -->
-    <div id="sidebar-drawer">
-        <div id="menu-close-trigger">
-            <div class="menu-text">
-                <a class="FZMSTFW3 navbar-menu-link">菜单</a>
-                <a class="SMILEYSANS2 navbar-menu-subtitle">Menu</a>
-            </div>
-            <div class="menu-lines2">
-                <div class="line2" style="transform: rotate(-15deg);">
-                </div>
-                <div class="line2" style="transform: rotate(15deg);">
-                </div>
-            </div>
-        </div>
-        <div class="sidebar-text">
-            <div class="sidebar-text-item">
-                <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;" href="/my-html/page/main/main.html">首<span
-                        style="color: #202020;">首页</span>页</a>
-                <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
-                    href="/my-html/page/main/main.html">NautilusDesign</a>
-            </div>
-            <div class="sidebar-text-item">
-                <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;"
-                    href="/my-html/page/collaborative/Collaborative Project.html">合作项目</a>
-                <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
-                    href="/my-html/page/collaborative/Collaborative Project.html">Collaborative
-                    Project</a>
-            </div>
-            <div class="sidebar-text-item">
-                <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;"
-                    href="/my-html/page/project/Project Scheduling.html">项目排单</a>
-                <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
-                    href="/my-html/page/project/Project Scheduling.html">Project Scheduling</a>
-            </div>
-        </div>
-        <!-- 可在此处添加内容 -->
-    </div>
-    <div id="main-show"
-        style="width: 100%; height: auto;background: #F3E6DA; display: flex;flex-direction: column; margin-top: 89px; margin-left: 0;">
-        <template id="app">
-            <div>
 
                 <div
-                    style="display: flex;text-align: left;position: fixed;z-index: 999999;background: #F3E6DA;padding-top: 34px;padding-bottom: 27px;width: 100%;">
-                    <div
+                    style="display: flex;text-align: left;z-index: 999999;background: #F3E6DA;margin-top: 90px;margin-bottom: 29px;width: 100%;">
+                    <div id="project-title"
                         style="display: flex; flex-direction: row; align-items: flex-start;padding-left: 296px;    height: 43px;width: 302pxpx;">
                         <div
                             style="width: 125.5px; height: 1.2px; background: #202020; transform:rotate(-15deg); margin-top: 19px;">
                         </div>
-                        <a class="FZMSTFW" href="/my-html/page/personal/Personal Project.html" 
-                            style="font-size: 35px;
+                        <a class="FZMSTFW" href="/my-html/page/personal/Personal Project.html" style="font-size: 35px; 
                             margin: 5px 0px 0px 17px;
                             font-weight: 400;
                             font-style: Regular;
@@ -118,7 +73,49 @@
                             ">{{current_json[0].text.title}} 详情</a>
                     </div>
                 </div>
+            </div>
 
+
+
+            <!-- 右侧抽屉栏 -->
+            <div id="sidebar-drawer">
+                <div id="menu-close-trigger">
+                    <div class="menu-text">
+                        <a class="FZMSTFW3 navbar-menu-link">菜单</a>
+                        <a class="SMILEYSANS2 navbar-menu-subtitle">Menu</a>
+                    </div>
+                    <div class="menu-lines2">
+                        <div class="line2" style="transform: rotate(-15deg);">
+                        </div>
+                        <div class="line2" style="transform: rotate(15deg);">
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-text">
+                    <div class="sidebar-text-item">
+                        <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;"
+                            href="/my-html/page/main/main.html">首<span style="color: #202020;">首页</span>页</a>
+                        <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
+                            href="/my-html/page/main/main.html">NautilusDesign</a>
+                    </div>
+                    <div class="sidebar-text-item">
+                        <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;"
+                            href="/my-html/page/collaborative/Collaborative Project.html">合作项目</a>
+                        <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
+                            href="/my-html/page/collaborative/Collaborative Project.html">Collaborative
+                            Project</a>
+                    </div>
+                    <div class="sidebar-text-item">
+                        <a class="FZMSTFW3 sidebar-text-link" style="font-size: 30px;"
+                            href="/my-html/page/project/Project Scheduling.html">项目排单</a>
+                        <a class="SMILEYSANS2 sidebar-text-subtitle" style="font-size: 16px;"
+                            href="/my-html/page/project/Project Scheduling.html">Project Scheduling</a>
+                    </div>
+                </div>
+                <!-- 可在此处添加内容 -->
+            </div>
+            <div id="main-show"
+                style="width: 100%; height: auto;background: #F3E6DA; display: flex;flex-direction: column; margin-top: 192px; margin-left: 0;">
 
                 <div class="project-list" style="min-height: 939px;">
                     <!--单个项目展示-->
@@ -130,7 +127,8 @@
 
                                 <div id="big-img"
                                     style="width: 726px; height: 408px; position: relative; overflow: hidden;">
-                                    <transition :name="item.transitionDirection ? 'slide-vertical-' + item.transitionDirection : ''">
+                                    <transition
+                                        :name="item.transitionDirection ? 'slide-vertical-' + item.transitionDirection : ''">
                                         <img :key="item.big_img_src" :src="item.big_img_src"
                                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
                                             alt="大图">
@@ -160,10 +158,9 @@
                         </div>
                         <!--右侧文字-->
                         <div class="project-text">
-                            <div style="width: 593px;height: 116px;">
-                                <a class="CAROUSELPRO" style="color: #202020;font-size: 100px;font-weight: 400;
-                        line-height: 116px;
-                            letter-spacing: 0.2em;">{{item.text.title}}</a>
+                            <div v-marquee style="width: 554px; height: 116px; white-space: nowrap; overflow: hidden;">
+                                <a class="CAROUSELPRO" style="color: #202020; font-size: 100px; font-weight: 400;display: block;
+                                 line-height: 116px; letter-spacing: 0.2em;">{{item.text.title}}</a>
                             </div>
 
                             <div style="width: 224px;height: 59px;margin-top: -14px;">
@@ -236,97 +233,100 @@
 
 
                 </div>
+
             </div>
-        </template>
-    </div>
 
 
 
 
 
-    <div id="bottom-div"
-        style="width: 100%; height: 185px; background: #202020; border-radius: 80px 0px 0px 0px; bottom: 0px; display: flex; align-items: center;">
-        <div
-            style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-            <img src="/my-html/img/main/Group 120.png" alt="俺的图图呢" style="width: 305px; margin-left: 150px;">
-            <div id="bottom-trigger" style="display: flex; align-items: center; gap: 40px; margin-right: 0px;">
-                <div>
-                    <p class="FZMSTFW3" style="font-size: 30px;color: #F3E6DA; margin: 0; transform: translateY(0px);">
-                        联系我们</p>
-                    <p class="SMILEYSANS"
-                        style="font-size: 18px;color: #F3E6DA; margin: 0; transform: translateY(-3px);">
-                        Contact Us</p>
+            <div id="bottom-div"
+                style="width: 100%; height: 185px; background: #202020; border-radius: 80px 0px 0px 0px; bottom: 0px; display: flex; align-items: center;">
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
+                    <img src="/my-html/img/main/Group 120.png" alt="俺的图图呢" style="width: 305px; margin-left: 150px;">
+                    <div id="bottom-trigger" style="display: flex; align-items: center; gap: 40px; margin-right: 0px;">
+                        <div>
+                            <p class="FZMSTFW3"
+                                style="font-size: 30px;color: #F3E6DA; margin: 0; transform: translateY(0px);">
+                                联系我们</p>
+                            <p class="SMILEYSANS"
+                                style="font-size: 18px;color: #F3E6DA; margin: 0; transform: translateY(-3px);">
+                                Contact Us</p>
+                        </div>
+                        <img src="/my-html/img/main/Group 121.png" alt="俺的图图呢"
+                            style="width: 276.95px; display: block; transform: translateY(0px);">
+                    </div>
                 </div>
-                <img src="/my-html/img/main/Group 121.png" alt="俺的图图呢"
-                    style="width: 276.95px; display: block; transform: translateY(0px);">
             </div>
-        </div>
-    </div>
-    <!-- 底部抽屉栏 -->
-    <div id="bottom-drawer">
-        <div class="abs-div"></div>
-        <div class="abs-div2"></div>
-        <div
-            style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
-            <img src="/my-html/img/main/Group 120black.png" alt="俺的图图呢"
-                style="width: 256.54px; height:53.72px ;margin-top: -85px; margin-left: 90px;">
-        </div>
-        <div style="position: absolute; left: 50%; transform: translateX(-50%);">
-            <div
-                style="display: flex; flex-direction: row; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 55px;">
-                <p class="CAROUSELPRO2" style="transform: translateY(-4px); font-size: 30px;">@</p>
-                <p class="CAROUSELPRO2" style="font-size: 30px;">Nero</p>
-            </div>
-            <p class="SMILEYSANS2" style=" margin-top: 30px;">NautilusDesign - 2025 - Zhejiang China</p>
-        </div>
-        <div class="bottom-contactus">
-            <div style="display: flex; flex-direction: row; align-items: flex-start; transform: translateX(70px);">
-                <div style="
+            <!-- 底部抽屉栏 -->
+            <div id="bottom-drawer">
+                <div class="abs-div"></div>
+                <div class="abs-div2"></div>
+                <div
+                    style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 100%;">
+                    <img src="/my-html/img/main/Group 120black.png" alt="俺的图图呢"
+                        style="width: 256.54px; height:53.72px ;margin-top: -85px; margin-left: 90px;">
+                </div>
+                <div style="position: absolute; left: 50%; transform: translateX(-50%);">
+                    <div
+                        style="display: flex; flex-direction: row; position: absolute; left: 50%; transform: translateX(-50%); margin-top: 55px;">
+                        <p class="CAROUSELPRO2" style="transform: translateY(-4px); font-size: 30px;">@</p>
+                        <p class="CAROUSELPRO2" style="font-size: 30px;">Nero</p>
+                    </div>
+                    <p class="SMILEYSANS2" style=" margin-top: 30px;">NautilusDesign - 2025 - Zhejiang China</p>
+                </div>
+                <div class="bottom-contactus">
+                    <div
+                        style="display: flex; flex-direction: row; align-items: flex-start; transform: translateX(70px);">
+                        <div style="
                     width: 125.5px;
                     height: 2px;
                     background: #F3E6DA;
                     transform: rotate(-15deg);
                     margin-top: 18px;">
+                        </div>
+                        <p class="FZMSTFW3" style="font-size: 40px; margin: 0 0 0 20px; letter-spacing: 0.2em">联系我们</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 20px;">
+                        <div style="display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 30px;">
+                            <img src="/my-html/img/main/Group 121-qq.png" alt="俺的图图呢" style="height: 57px;">
+                            <p class="bottom-contactus-text">
+                                Personal QQ Number:<br>
+                                827060207<br>
+                                <span style="font-size: 22px;">（私人QQ，请备注来意）</span>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 30px;">
+                            <img src="/my-html/img/main/Group 121-qq group.png" alt="俺的图图呢" style="height: 57px;">
+                            <p class="bottom-contactus-text">
+                                QQ Group:<br>
+                                Now Loading...<br>
+                                <span style="font-size: 22px;">（QQ交流|下单群，欢迎加群）</span>
+                            </p>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: flex-start;">
+                            <img src="/my-html/img/main/Group 121-email.png" alt="俺的图图呢" style="height: 57px;">
+                            <p class="bottom-contactus-text">
+                                E-Mail:<br>
+                                827060207@qq.com<br>
+                                <span style="font-size: 22px;">（个人邮箱，有问题请留言）</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <p class="FZMSTFW3" style="font-size: 40px; margin: 0 0 0 20px; letter-spacing: 0.2em">联系我们</p>
+                <div id="bottom-close-trigger">
+                    <div class="bottom-menu-line">
+                        <div class="bottom-line" style="transform: rotate(-15deg);">
+                        </div>
+                        <div class="bottom-line" style="transform: rotate(15deg);">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; margin-top: 20px;">
-                <div style="display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 30px;">
-                    <img src="/my-html/img/main/Group 121-qq.png" alt="俺的图图呢" style="height: 57px;">
-                    <p class="bottom-contactus-text">
-                        Personal QQ Number:<br>
-                        827060207<br>
-                        <span style="font-size: 22px;">（私人QQ，请备注来意）</span>
-                    </p>
-                </div>
-                <div style="display: flex; flex-direction: row; align-items: flex-start; margin-bottom: 30px;">
-                    <img src="/my-html/img/main/Group 121-qq group.png" alt="俺的图图呢" style="height: 57px;">
-                    <p class="bottom-contactus-text">
-                        QQ Group:<br>
-                        Now Loading...<br>
-                        <span style="font-size: 22px;">（QQ交流|下单群，欢迎加群）</span>
-                    </p>
-                </div>
-                <div style="display: flex; flex-direction: row; align-items: flex-start;">
-                    <img src="/my-html/img/main/Group 121-email.png" alt="俺的图图呢" style="height: 57px;">
-                    <p class="bottom-contactus-text">
-                        E-Mail:<br>
-                        827060207@qq.com<br>
-                        <span style="font-size: 22px;">（个人邮箱，有问题请留言）</span>
-                    </p>
-                </div>
-            </div>
+            <div id="bottom"></div>
         </div>
-        <div id="bottom-close-trigger">
-            <div class="bottom-menu-line">
-                <div class="bottom-line" style="transform: rotate(-15deg);">
-                </div>
-                <div class="bottom-line" style="transform: rotate(15deg);">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="bottom"></div>
+    </template>
 
 
 
@@ -342,8 +342,8 @@
                 big_img_src: "/my-html/img/project/", //大图路径头部
                 project_json: [
                     //第一把套件信息
-                      {
-                        transitionDirection : 'left',
+                    {
+                        transitionDirection: 'left',
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
@@ -394,8 +394,8 @@
                         愿这趟LOCATION 55° 的沙漠之旅，能带你穿越海市蜃楼，在八芒星的指引下，抵达属于你的宝藏之地。`,
                         }
                     },
-                     {
-                        transitionDirection : 'left',
+                    {
+                        transitionDirection: 'left',
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
@@ -468,7 +468,7 @@
                         }
                     },
                     {
-                        transitionDirection : 'left',
+                        transitionDirection: 'left',
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
@@ -537,14 +537,14 @@
                     },
                     //第二把套件信息
                     {
-                        transitionDirection : 'left',
+                        transitionDirection: 'left',
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
                             "kingdom keeper/2.webp",
                             "kingdom keeper/3.webp",
                             "kingdom keeper/4.webp",
-                             "kingdom keeper/1.png",
+                            "kingdom keeper/1.png",
                         ],
                         "big_img_src": "/my-html/img/project/" + "kingdom keeper/2.webp",
                         //右侧选项
@@ -580,7 +580,7 @@
                     },
                     //第三把套件信息
                     {
-                        transitionDirection : 'left',
+                        transitionDirection: 'left',
                         activeThumbIndex: 0,
                         //左侧图片
                         little_img_src: [
@@ -590,7 +590,7 @@
                             "crux45/4.png",
                             "crux45/5.png",
                         ],
-                        "big_img_src":  "/my-html/img/project/" + "crux45/1.png",
+                        "big_img_src": "/my-html/img/project/" + "crux45/1.png",
                         //右侧选项
                         "select": [
                             {
@@ -616,7 +616,7 @@
                                     { "name": "阳极铝（内配）", "price": "44" },
                                 ]
                             },
-                         {
+                            {
                                 "activeTypeIndex": -1,
                                 "title": "定位板选择：",
                                 "type": [
@@ -940,12 +940,18 @@
         // 获取“关于我们”内容区域，用于抽屉打开时左移
         const aboutUsContent = document.querySelector('div[id*="main-show"]');
 
+        const projectTitle = document.querySelector('div[id*="project-title"]');
+
         // 打开抽屉函数：抽屉滑出，内容左移
         function openDrawer() {
             sidebarDrawer.style.right = '10px'; // 抽屉滑出
             if (aboutUsContent) {
                 aboutUsContent.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; // 平滑动画
                 aboutUsContent.style.transform = 'translateX(-145px)'; // 内容左移
+            }
+            if (projectTitle) {
+                projectTitle.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; // 平滑动画
+                projectTitle.style.transform = 'translateX(-145px)'; // 内容左移
             }
             app.open_side_drawer = true;
         }
@@ -955,6 +961,9 @@
             sidebarDrawer.style.right = '-335px'; // 抽屉收回
             if (aboutUsContent) {
                 aboutUsContent.style.transform = 'translateX(0px)'; // 内容归位
+            }
+            if (projectTitle) {
+                projectTitle.style.transform = 'translateX(0px)'; // 内容归位
             }
             app.open_side_drawer = false;
         }

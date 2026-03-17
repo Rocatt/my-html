@@ -68,15 +68,16 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 0 0 70px 0;
+    padding: 0;
     background: #F3E6DA;
     border-bottom: 0px solid #202020;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar-container {
     margin-left: 26px;
     margin-top: 30px;
-    position: relative;
     max-width: 1920px;
     margin-right: 26px;
 }
@@ -553,14 +554,13 @@ body {
 .project-list{
     width: 100%;
     height: 100%;
-    padding-top: 77px;
 }
 
 .project-block{
     display: flex;
     width: 100%;
     background: #F3E6DA;
-    margin: 27px 0 41px 0;
+    margin: 0 0 61px 0;
     display: inline-flex;
 }
 

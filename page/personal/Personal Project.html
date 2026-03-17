@@ -22,7 +22,7 @@
     </script>
     <!-- 生产环境版本，优化了尺寸和速度 -->
     <script src="/my-html/js/vue.min.js"></script>
-    <script src="/my-html/js/v-marquee.js"></script>  
+    <script src="/my-html/js/v-marquee.js"></script>
 
 
 </head>
@@ -43,6 +43,17 @@
                         <div class="line"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div
+            style="display: flex;text-align: left;z-index: 999999;background: #F3E6DA;margin-top: 90px;margin-bottom: 29px;width: 100%;">
+            <div id="project-title"
+                style="display: flex; flex-direction: row; align-items: flex-start;padding-left: 296px;    height: 43px;width: 302pxpx;">
+                <div
+                    style="width: 125.5px; height: 1.2px; background: #202020; transform:rotate(-15deg); margin-top: 19px;">
+                </div>
+                <p class="FZMSTFW" style="font-size: 35px; margin: 1px 1px 0 17px;">个人项目</p>
             </div>
         </div>
     </div>
@@ -87,19 +98,7 @@
         <!-- 可在此处添加内容 -->
     </div>
     <div id="main-show"
-        style="width: 100%; height: 100%;background: #F3E6DA; display: flex;flex-direction: column; margin-top: 89px; margin-left: 0;">
-        <teleport to="body">
-            <div
-                style="display: flex;text-align: left;position: fixed;z-index: 999999;background: #F3E6DA;padding-top: 34px;padding-bottom: 27px;width: 100%;">
-                <div
-                    style="display: flex; align-items: flex-start;padding-left: 296px;    height: 43px;width: 302pxpx;">
-                    <div
-                        style="width: 125.5px; height: 1.2px; background: #202020; transform:rotate(-15deg); margin-top: 19px;">
-                    </div>
-                    <p class="FZMSTFW" style="font-size: 35px; margin: 1px 1px 0 17px;">个人项目</p>
-                </div>
-            </div>
-        </teleport>
+        style="width: 100%; height: 100%;background: #F3E6DA; display: flex;flex-direction: column; margin-top: 192px; margin-left: 0;">
         <template id="app">
 
             <div class="project-list">
@@ -662,12 +661,18 @@
         // 获取“关于我们”内容区域，用于抽屉打开时左移
         const aboutUsContent = document.querySelector('div[id*="main-show"]');
 
+        const projectTitle = document.querySelector('div[id*="project-title"]');
+
         // 打开抽屉函数：抽屉滑出，内容左移
         function openDrawer() {
             sidebarDrawer.style.right = '10px'; // 抽屉滑出
             if (aboutUsContent) {
                 aboutUsContent.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; // 平滑动画
                 aboutUsContent.style.transform = 'translateX(-145px)'; // 内容左移
+            }
+            if (projectTitle) {
+                projectTitle.style.transition = 'transform 0.4s cubic-bezier(.4,0,.2,1)'; // 平滑动画
+                projectTitle.style.transform = 'translateX(-145px)'; // 内容左移
             }
             app.open_side_drawer = true;
         }
@@ -677,6 +682,9 @@
             sidebarDrawer.style.right = '-335px'; // 抽屉收回
             if (aboutUsContent) {
                 aboutUsContent.style.transform = 'translateX(0px)'; // 内容归位
+            }
+            if (projectTitle) {
+                projectTitle.style.transform = 'translateX(0px)'; // 内容归位
             }
             app.open_side_drawer = false;
         }

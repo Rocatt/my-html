@@ -734,3 +734,9 @@ body {
     color: #F3E6DA;
     /* 选中文字 */
 }
+
+/*跑马灯样式*/
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
